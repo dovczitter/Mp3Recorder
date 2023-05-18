@@ -1,0 +1,25 @@
+<Mp3Recorder>:
+    padding: 50
+    spacing: 20
+    orientation: 'vertical'
+
+    Button:
+        id: record_button
+        text: "Record"
+        on_release: root.record()
+    Button:
+        id: email_button
+        text: 'Email'
+        on_release: root.email()
+    Button:
+        id: exit_button
+        text: 'Exit'
+        on_release: root.exit()
+    Label:
+        id: time_label
+        text: '00:00:00'
+        font_size: 16
+    Label:
+        id: info_label
+        text: 'Info : '
+        font_size: 16

@@ -1,0 +1,13 @@
+#
+# === Mp3Recorder.csv ===
+#
+Username,dovczitter@outlook.com
+Password,@Mypassword1
+Sender,dovczitter@outlook.com
+# wip - requires both yahoo and outlook, may be a bug or outlook requirement.
+Receiver,dov_czitter@yahoo.com,dovczitter@outlook.com
+#Receiver,dov_czitter@yahoo.com
+#
+Host,smtp-mail.outlook.com
+Port,587
+#

@@ -25,6 +25,7 @@ class Recorder():
         ]
     
     mp3Filename = ''
+    csvFilename = 'Mp3Recorder.csv'
     
     def __init__(self, **kwargs):
         super(Recorder, self).__init__(**kwargs)
@@ -49,6 +50,8 @@ class Recorder():
         
     # ----------------- configInit ------------------------ #        
     def configInit(self):
+        import shutil
+        
         csvFn = 'Mp3Recorder.csv'
         with open(csvFn) as f:
             content_list = f.readlines()
@@ -83,6 +86,16 @@ class Recorder():
             self.SERVER_HOST = str(self.config['Host'][0])
         if self.config['Port']:
             self.SERVER_PORT = int(self.config['Port'][0])
+            
+        now = datetime.now()
+        dt_string = now.strftime("%d%b%Y_%H%M%S")
+        csvFilename_save = f'Mp3Recorder_{dt_string}.csv'
+        
+        ss = SharedStorage()
+        share = ss.copy_to_shared(self.csvFilename)
+        src_path = ss.copy_from_shared(share)
+        dst_path = src_path.replace(self.csvFilename,csvFilename_save)
+        shutil.copyfile(src_path,dst_path)
         
     # ----------------- permissions ------------------------ #        
     def check_permission(permission, activity=None):

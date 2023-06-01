@@ -29,7 +29,7 @@ source.exclude_dirs = tests, bin, venv, .venv, save*
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 4.1
+version = 4.2
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
 # version.filename = %(source.dir)s/main.py

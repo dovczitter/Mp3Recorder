@@ -4,7 +4,7 @@ from kivy.uix.boxlayout import BoxLayout
 import time
 
 from recorder import Recorder
-
+#
 class Mp3Recorder(BoxLayout):
     
     def __init__(self, **kwargs):

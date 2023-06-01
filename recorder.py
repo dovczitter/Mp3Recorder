@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 from sharedstorage import SharedStorage
-
+#
 PythonActivity = None
 if platform == "android":
     from android import mActivity, autoclass, api_version

@@ -12,7 +12,7 @@ Intent = autoclass('android.content.Intent')
 # Requires
 # READ_EXTERNAL_STORAGE   Android < 10
 # READ_EXTERNAL_STORAGE   Android >= 10 and file not owned by this app 
-
+#
 class Chooser():
     
     def __init__(self, callback = None, **kwargs):
